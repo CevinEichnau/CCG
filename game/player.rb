@@ -13,6 +13,14 @@ class Player
 		@players_name = foo
 	end  
 
+	def cards
+		@cards
+	end  
+
+	def cards=(foo)
+		@cards = foo
+	end 
+
 	def game_cards
 		@cards 
 	end  
@@ -22,6 +30,7 @@ class Player
 			raise "Spieler hat Karte schon #{card}"
 		end	
 		@cards.push(card) 
+
 	end
 
 	def take_card(card)

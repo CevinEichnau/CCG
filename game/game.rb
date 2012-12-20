@@ -20,7 +20,7 @@ class Game
 
   def delete_player(foo)
     if !has_player?(foo)
-      raise "Kein Spiler mit der ID: #{foo}" 
+      raise "Kein Spieler mit der ID: #{foo}" 
     end 
     @player.delete(foo)
   end
@@ -54,6 +54,18 @@ class Game
           player.give_card(result) 
         end
      end 
+  end  
+
+  def picked_card(foo)
+     self.get_player(self.current_user).cards.each do |p|
+      if foo == p
+
+        take_card(foo)
+
+      
+        
+      end
+     end
   end  
 
 
