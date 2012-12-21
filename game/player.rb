@@ -25,13 +25,20 @@ class Player
 		@cards 
 	end  
 
+	
+	
+
 	def give_card(card)
 		if has_card?(card)
-			raise "Spieler hat Karte schon #{card}"
+			puts "Spieler hat Karte #{card} schon gebe andere Karte"
+			
+			@cards.push(card + 1) 
 		end	
 		@cards.push(card) 
 
 	end
+
+	
 
 	def take_card(card)
 		if !has_card?(card)
